@@ -1,0 +1,322 @@
+@import "../mixin"
+.iconfont
+	display: inline-block
+	line-height: 1
+// part of head
+.com-profile-header
+	position: relative
+	padding: .7em 0 1em
+	z-index: 1
+	box-shadow: 0 1px 5px #9E9E9E
+	.accout-group
+		line-height: 48px
+		text-align: right
+		a 
+			+font-size(14)
+			color: #333
+// 找车助手
+.car-assistant
+	.banner
+		position: relative
+		overflow: hidden
+		+respond-to-min(medium)
+			height: 411px
+		>img.big
+			position: absolute
+			left: 50%
+			margin-left: -950px
+			display: none
+	.row-strengths
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(20px)
+		text-align: center
+		.title
+			+font-size(24)
+			line-height: 2
+			color: #000
+		.item
+			+padding-horizontal(15px)
+			+respond-to(extra-small)
+				+padding-horizontal(0)
+			.color-block
+				padding: 30px 0
+				&.info
+					background-color: #59b3d8
+				&.profession
+					background-color: #eab63e
+				&.resource
+					background-color: #ea717a
+				&.serve
+					background-color: #49c9c8
+				i
+					padding: 15px
+					border-radius: 100px
+					+font-size(50)
+					color: #fff
+					background-color: rgba(#fff, .3)
+			.describle
+				margin-top: 10px
+				+font-size(14)
+				text-align: left
+	.set-serve
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(30px)
+		h2
+			margin-top: 0
+			margin-bottom: 50px		
+			+respond-to(extra-small)
+				margin-bottom: 20px
+			position: relative
+			+font-size(28)
+			text-align: center
+			color: #000
+			&:before,&:after
+				content: ""
+				margin-top: 14px
+				position: absolute
+				display: inline-block
+				width: 3.5em
+				height: 1px
+				background-color: #b7b7b7
+				+respond-to(extra-small)
+					width: 2em
+			&:before
+				left: 50%
+				margin-left: -6em
+				+respond-to(extra-small)
+					margin-left: -4.5em
+			&:after
+				margin-left: .5em
+		.text
+			margin-top: 50px
+			+font-size(16)
+			line-height: 2
+			>span
+				color: #ff510c
+
+// 资源秘书
+.resource-clerk
+	.banner
+		position: relative
+		overflow: hidden
+		+respond-to-min(medium)
+			height: 359px
+		>img.big
+			position: absolute
+			left: 50%
+			margin-left: -950px
+			display: none
+
+	.block-clerk-profile
+		padding-top: 50px
+		+respond-to(extra-small)
+			padding-top: 20px
+		p
+			+font-size(18)
+			line-height: 1.7
+			text-indent: 2em
+			color: #000
+			+respond-to(extra-small)
+				+font-size(14)
+	.block-relationship
+		padding-top: 50px
+		+respond-to(extra-small)
+			padding-top: 20px
+		img
+			margin: 0 auto
+			+respond-to(large)
+				margin-top: 38px
+			+respond-to(medium)
+				margin-top: 70px
+		.content-wrap
+			+padding-vertical(15px)
+			.content
+				padding-top: 10px 
+				padding-bottom: 15px
+				text-align: center
+				color: #000			
+				&.efficiency
+					background-color: #00aff2
+				&.data
+					background-color: #01bfa6
+				&.manpower
+					background-color: #e96862
+				&.department
+					background-color: #f8be38
+				&.product
+					background-color: #f19100
+				&.bid
+					background-color: #8d55a0			
+				>strong
+					display: block
+					font-weight: normal
+					+font-size(30)
+					+respond-to(extra-small)
+						+font-size(20)
+				>div
+					display: inline-block
+					max-width: 100px
+					min-height: 52px
+					+font-size(16)
+					line-height: 1.6
+					+respond-to(extra-small)
+						+font-size(12)
+	.block-price
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(20px)
+		+respond-to(small)
+			>.left
+				padding-right: 30px
+			>.right
+				padding-left: 30px
+		+respond-to(extra-small)
+			>.right
+				margin-top: 15px
+		.content
+			+padding-vertical(50px)
+			+respond-to(small)
+				padding-left: 15px
+			+respond-to(extra-small)
+				+padding-vertical(20px)
+			+clearfix
+			background-color: #ffe7dd
+			>.price
+				+respond-to-max(small)
+					margin-bottom: 20px
+					text-align: left
+				text-align: center
+				>div
+					// +respond-to(large)
+					+font-size(30)
+					+respond-to(extra-small)
+						+font-size(20)
+					+respond-to(medium)
+						+font-size(26)
+					+respond-to-min(medium)
+						+margin-vertical(20px)
+					color: #ff500d
+				>del
+					+font-size(16)
+					color: #a0a0a0
+			>.info
+				>strong
+					+font-size(26)
+					color: #000
+					+respond-to(extra-small)
+						+font-size(16)
+				>p
+					margin-bottom: 0
+					min-height: 112px
+					line-height: 2
+					+font-size(14)
+					+respond-to(extra-small)
+						+font-size(12)
+
+// 广告计划
+.ad-plan
+	h2
+		position: relative
+		+font-size(26)
+		text-align: center
+		color: #000
+		&:before,&:after
+			content: ""
+			margin-top: 14px
+			position: absolute
+			display: inline-block
+			width: 3.5em
+			height: 1px
+			background-color: #b7b7b7
+			+respond-to(extra-small)
+				width: 2em
+		&:before
+			position: absolute
+			left: 50%
+			margin-left: -6em
+			+respond-to(extra-small)
+				margin-left: -4.5em
+		&:after
+			margin-left: .5em
+	+font-size(14)
+	.banner
+		position: relative
+		overflow: hidden
+		+respond-to(large)
+			height: 490px
+		>img.big
+			position: absolute
+			left: 50%
+			margin-left: -950px
+			display: none
+
+	.complany-profile
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(20px)
+		color: #5d5d5d
+		p
+			text-indent: 2em
+
+	.row-strengths
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(30px)
+		background-color: #f7f7f7
+		.row
+			>h2
+				margin-top: 0
+				margin-bottom: 50px
+				+respond-to(extra-small)
+					margin-bottom: 20px
+			>div
+				+padding-vertical(15px)
+				+font-size(18)
+				text-align: center
+				color: #fff
+				>.color-block
+					padding: 30px 0
+					&.info
+						background-color: #f8be38
+					&.profession
+						background-color: #e96862
+					&.resource
+						background-color: #01bfa6
+					&.serve
+						background-color: #00aff2
+					.shade-layer
+						padding-top: 15px
+						i
+							padding: 30px
+							border-radius: 100px
+							+font-size(50)
+							background-color: rgba(#fff, .3)
+
+	.set-serve
+		+padding-vertical(50px)
+		+respond-to(extra-small)
+			+padding-vertical(30px)
+		h2
+			margin-top: 0
+			margin-bottom: 50px		
+			+respond-to(extra-small)
+				margin-bottom: 20px			
+		.table
+			+font-size(14)
+			border-color: #000
+			thead th
+				+font-size(16)
+				border-bottom-width: 1px
+				border-color: #000
+				color: #fff
+				background-color: #f90
+			tbody td
+				+padding-vertical(4px)
+				vertical-align: middle
+				border-color: #000
+				color: #333
+				background-color: #ffffcd
+		.text
+			padding-top: 15px

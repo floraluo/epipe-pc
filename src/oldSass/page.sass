@@ -1,0 +1,201 @@
+@charset "utf-8"
+@import "compass/css3"
+@import "compass/typography"
+@import "sprite"
+
+@mixin font-size($fs:14)
+	font-size: $fs+px
+	font-size: $fs * 0.1+rem
+
+$g-width: 933px !default
+$link-color: #31899d
+$g-bg-color: #31899d
+
+.wrap-body
+	margin-top: -126px
+	background: url("../images/bg.jpg") no-repeat fixed
+	background-size: 100% 100%
+	background-origin: content-box
+	&>.container
+		position: relative
+		background-color: #fff
+.header
+	position: relative
+	height: 487px
+	min-width: $g-width
+	overflow: hidden
+	&>img
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -960px
+
+.container
+	margin: 0 auto
+	width: $g-width
+	&>.row
+		padding: 0 15px
+
+
+// 第一节 导读
+.introduction
+	margin-bottom: 50px
+	text-align: center
+	&>p
+		padding: 0 15px
+		margin-bottom: 25px
+		+font-size(18)
+		line-height: 1.7
+		text-indent: 2em
+		text-align: left
+	&>a
+		+font-size(30)
+		color: $link-color
+		&:hover
+			color: darken($link-color,10%)
+	&>img
+		margin-top: 20px
+
+// 第二节 塑料行业
+.section-h2
+	padding: .5em 1em
+	margin-bottom: 30px
+	+inline-block
+	+font-size(30)
+	color: #fff
+	background-color: $g-bg-color
+.section-plastic
+	margin-bottom: 50px
+	+clearfix
+	text-align: center
+	+font-size(14)
+	h3
+		margin-bottom: 15px
+		+font-size(18)
+		font-weight: bold
+		&>i
+			position: absolute
+			display: inline-block
+			margin-top: -7px
+			&.s-flag-blue
+				margin-left: -30px
+		&>a
+			margin-left: 35px
+	.devalue-rmb
+		padding: 35px 0
+		float: left
+		width: 48%
+		color: #fff
+		background-color: $g-bg-color
+		&>p
+			padding-left: 35px
+			padding-right: 35px
+			line-height: 1.8
+			text-indent: 2em
+			text-align: left
+	.oil-plastic
+		float: right
+		width: 48%
+		text-align: left
+		&>h3
+			margin-top: 23px
+		&>p
+			padding-right: 3em
+			line-height: 1.75
+			text-indent: 2em
+			color: #434343
+
+// 第三节 人民币贬值
+.section-rmb
+	+clearfix
+	text-align: center
+	background: url(../images/man.png) 695px 109px no-repeat
+	&>h2
+		padding-top: .3em
+		padding-bottom: .3em
+		line-height: 1.5
+		max-width: 23em
+		text-align: left
+	&>article
+		+clearfix
+		&>h3
+			margin: 10px 0 40px
+			+font-size(30)
+			color: $link-color
+		&>.col-1
+			float: left
+			width: 47%
+		&>.col-2
+			margin-top: 150px
+			float: right
+			width: 49%
+		&>div
+			text-align: left
+			&>h4
+				padding-left: 15px
+				padding-right: 15px
+				margin-bottom: 10px
+				font-weight: bold
+				+font-size(16)
+				color: #31899d
+			&>p
+				padding-left: 15px
+				padding-right: 15px
+				margin-bottom: 30px
+				line-height: 2
+				+font-size(14)
+				text-indent: 2em
+				color: #434343
+	&>.summarize
+		padding: 0 15px 15px
+		line-height: 1.7
+		font-weight: bold
+		+font-size(18)
+		text-align: left
+		color: $link-color
+//底部 
+.footer
+	padding: 15px 0
+	width: 100%
+	height: 220px
+	+clearfix
+	color: #fff
+	background: $g-bg-color url("../images/footer-text.jpg") no-repeat left bottom
+	&>p
+		margin-bottom: 15px
+		padding-left: 25px
+		font-weight: bold
+		+font-size(18)
+	&>ul
+		margin-left: 15px
+		float: left
+		width: 80%
+		line-height: 1.8
+		&>li
+			float: left
+			width: 50%
+			+font-size(14)
+			+ellipsis
+			&:before
+				content: ""
+				position: absolute
+				margin-top: 10px
+				display: block
+				width: 5px
+				height: 5px
+				background-color: #fff
+			&>a
+				padding-left: 12px
+				color: #fff
+				&:hover
+					text-decoration: underline
+	&>.qr-code
+		float: right
+		width: 18%
+		text-align: center
+		&>a
+			line-height: 1.5
+			+font-size(14)
+			color: #fff
+			&:hover
+				text-decoration: underline

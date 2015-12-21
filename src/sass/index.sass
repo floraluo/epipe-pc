@@ -1,0 +1,707 @@
+// @import "compass/css3"
+@import "mixin"
+// @import "sprite"
+$panel-border-color: #eee
+$horizontal-gatter: 15px
+$epipe-gatter: 15px
+%panel-side-box
+  border-left: 1px solid $panel-border-color
+  border-right: 1px solid $panel-border-color
+.flora-index
+  +respond-to(extra-small)
+    .bar-row
+      +margin-horizontal(0)
+  .ul-link-list
+    padding-left: 0
+    list-style-type: none
+    li
+      position: relative
+      padding-left: 1em
+      // +font-size(14)
+      +text-overflow
+      line-height: 2
+      &:before
+        content: ""
+        margin-top: 12px
+        margin-left: -0.7em
+        +list-style(3px, #888)
+      a
+        color: #333
+      >.right
+        position: absolute
+        right: 0
+  .panel-left
+    +respond-to-min(small)
+      padding-left: 0
+      padding-right: 2 * $epipe-gatter
+    &>div
+      @extend %panel-side-box
+  .panel-right
+    +respond-to-min(small)
+      padding-right: 0
+      padding-left: 2 * $epipe-gatter
+    &>div
+      @extend %panel-side-box
+  .panel-primary
+    padding-top: 20px
+    // height: 100%
+    h3,.panel-title.h3
+      margin-left: 8px
+      margin-top: 0
+      margin-bottom: 10px
+      padding-left: 10px
+      border-left: 4px solid #ff7300
+      +font-size(18)
+  // city linkage
+  // .linkage-wrap
+  //   position: absolute
+  //   z-index: 1071
+  //   padding-right: 30px
+  //   width: 100%
+  //   >.linkage
+  //     margin-top: -1px
+  //     border: 1px solid rgba(#000, .15)
+  //     border-top-width: 0
+  //     border-radius: 4px
+  //     box-shadow: 0 6px 12px rgba(0,0,0,.175)
+  //     background-color: #fff
+  //     display: none
+  //     &.active
+  //       display: block
+  //     .linkage-tab 
+  //       li
+  //         >a
+  //           color: #555
+  //           >em
+  //             font-style: normal
+  //             font-weight: bold
+  //             font-size: (14)
+  //         &:first-child
+  //           >a 
+  //             border-left-color: transparent
+  //         &.active
+  //           a
+  //             color: #ff7300
+  //     .area-list
+  //       padding: 10px .5em 0
+  //       +clearfix
+  //       list-style: none
+  //       li
+  //         padding: 4px 8px
+  //         float: left
+  //         border-radius: 4px
+  //         &:hover
+  //           cursor: pointer
+  //           color: #fff
+  //           background-color: #ff7300
+  .main-block
+    +respond-to-min(small)
+      +padding-horizontal(0)
+    .panel-primary
+      +respond-to(extra-small)
+        border-left: 1px solid $panel-border-color
+        border-right: 1px solid $panel-border-color
+  .panel-banner
+    .banner-theme
+      position: absolute
+      bottom: 0
+      +padding-vertical(10px)
+      width: 100%
+      // +font-size(14)
+      font-weight: bold
+      text-align: center
+      color: #1ec9b7
+      background-color: #eee
+    .owl-banner
+      // border: 1px solid $panel-border-color
+      // border-bottom-width: 0
+      border-top: 1px solid $panel-border-color
+      img
+        width: 100%
+      .owl-controls
+        position: absolute
+        bottom: 40px
+        width: 100%
+        text-align: center
+        .owl-page
+          display: inline-block
+          zoom: 1
+          cursor: pointer
+          &.active span
+            opacity: 1
+          span
+            margin: 0 5px
+            display: block
+            width: 12px
+            height: 12px
+            border-radius: 20px
+            opacity: .5
+            background-color: #fff
+  .news-list
+    h3
+      margin-bottom: 15px
+      +text-overflow
+      color: #fff
+      >a
+        color: #333
+    p
+      line-height: 1.6
+      +font-size(12)
+      color: #888
+    ul>li
+      .new-classfy
+        color: #888
+        margin-right: 5px
+      .new-title
+        color: #333
+  .panel-sign
+    // border: 1px solid $panel-border-color
+    // border-bottom-width: 0
+    border-top: 1px solid $panel-border-color
+    .welcome
+      min-height: 99px
+      @extend %clearfix
+      +font-size(14)
+      .text
+        padding: 20px 0 0 15px
+        line-height: 1.7
+        color: #2f2f2f
+        .big
+          +font-size(18)
+          font-weight: bold
+          color: #fe6800
+      .div-img
+        padding-right: 0
+    .sign-entrance
+      +padding-vertical(10px)
+      background-color: #fdf1e7
+      a
+        +padding-horizontal(1.8em)
+        +respond-to(medium)
+          +padding-horizontal(1em)
+        +respond-to(extra-small)
+          +padding-horizontal(1.1em)
+        display: inline-block
+        color: #ff500b
+        // +font-size(14)
+        &+a
+          border-left: 1px solid #ff500b
+    .img-responsive
+      width: 100%
+  .panel-topic
+    +padding-horizontal(10px)
+    padding-top: 10px
+    // @extend %panel-side-box
+    h4
+      font-weight: bold
+      .icon
+        vertical-align: middle
+      a
+        color: #333
+    p
+      line-height: 1.6
+      +font-size(12)
+      color: #888
+      &.brief
+        margin-bottom: 0
+  .panel-cyclopedia
+    padding-top: 20px
+    +respond-to(extra-small)
+      border: 1px solid $panel-border-color
+    .cyc-title
+      clear: both
+      &>a
+        padding: 3px 1em
+        // margin-bottom: 8px
+        display: inline-block
+        // +font-size(14)
+        text-decoration: none
+        color: #fff 
+        &.cyc-title-a
+          background-color: #ffae00
+          &:hover
+            background-color: darken(#ffae00, 5)
+        &.cyc-title-b
+          background-color: #1ec9b7
+          &:hover
+            background-color: darken(#1ec9b7, 5)
+    .ul-link-list
+      position: relative
+      width: 49%
+      li
+        &.new
+          padding-right: 1.5em
+          &:after
+            content: ""
+            position: absolute
+            right: 0
+            margin-top: 3px
+            display: inline-block
+            // @extend .s-new
+            width: 16px
+            height: 16px
+            background-image: url('/content/images/s-s811896e3a3.png')
+            background-repeat: no-repeat
+            background-position: 0 -61px
+  .panel-cooperation
+    .panel-content
+      .complany-logo-group
+        border-top: 1px solid $panel-border-color
+        @extend %clearfix
+        >div
+          +padding-vertical(10px)
+          border-bottom: 1px solid $panel-border-color
+          border-left: 1px solid $panel-border-color
+          margin-left: -1px
+          text-align: center
+          >img
+            // +margin-vertical(10px)
+            width: 100%
+            max-height: 45px
+      .complany-name-group
+        +padding-horizontal(10px)
+        padding-bottom: 6px
+        >.title
+          line-height: 2
+          a
+            +font-size(16)
+            color: #ff6424
+        >.name-group
+          @extend %clearfix
+          >.name
+            float: left
+            padding-right: .5em
+            width: 50%
+            @extend %text-overflow
+            color: #333
+            a
+              color: #333
+
+  .panel-material
+    max-height: 260px
+    overflow-y: hidden
+    +respond-to(small)
+      border-top: 1px solid $panel-border-color
+    +respond-to(extra-small)
+      max-height: 280px
+    .table
+      margin-bottom: 0
+      +font-size(12)
+      &.table-thead
+        position: relative
+        thead
+          background-color: #fdf1e7
+          th
+            +padding-vertical(10px)
+            border-bottom-width: 0
+      &.table-tbody
+        margin-bottom: 8px
+      .up 
+        color: #f00
+      .down
+        color: #2f802f
+  .panel-exhibition
+    +padding-horizontal(10px)
+    padding-bottom: $horizontal-gatter
+    +respond-to(small)
+      margin-right: -2 * $epipe-gatter
+      border: 1px solid $panel-border-color
+    .carousel
+      padding-top: 29px
+      .carousel-indicators
+        padding-left: 10px
+        left: 0
+        top: 0
+        bottom: inherit
+        margin-left: 0
+        border-left: 4px solid #ff7300
+        line-height: 1.1
+        width: 100%
+        text-align: left
+        >li 
+          width: auto
+          height: auto
+          border-radius: 0
+          border-width: 0
+          +font-size(18)
+          text-indent: 0
+          &.active
+            color: #ff7300
+            background-color: transparent
+  // .panel-exhibition
+  //   +padding-horizontal(10px)
+  //   padding-bottom: $horizontal-gatter
+  //   +respond-to(small)
+  //     margin-right: -2 * $epipe-gatter
+  //     border: 1px solid $panel-border-color      
+    // h3
+    //   margin-left: 0
+    // @at-root .owl-custom
+    //   margin-bottom: 15px
+    //   img
+    //     width: 100%
+    //     display: block
+    //     // &:hover
+    //       // animation: scale 1s
+    //       // @at-root
+    //       //   +keyframes(scale)
+    //       //     0%,100%
+    //       //       transform: scale(1,1)
+    //       //     50%  
+    //       //       transform: scale(1.3,1.3)  
+    //   .owl-item
+    //     // padding-right: 10px
+    //     +padding-horizontal(5px)
+    //     &>div
+    //       position: relative
+    //       overflow: hidden
+    //     .title
+    //       position: absolute
+    //       bottom: 0
+    //       +padding-vertical(6px)
+    //       width: 100%
+    //       +font-size(12)
+    //       +text-overflow
+    //       text-align: center
+    //       text-decoration: none
+    //       color: #fff
+    //       background-color: rgba(#000, .4)
+    //       &:hover
+    //         background-color: rgba(#000, .8)
+    //   .owl-controls
+    //     position: absolute
+    //     top: -27px
+    //     right: 25px
+    //     .owl-page
+    //       display: inline-block
+    //       zoom: 1
+    //       cursor: pointer
+    //       &.active span
+    //         background-color: #ff7300
+    //       span
+    //         margin: 0 5px
+    //         display: block
+    //         width: 12px
+    //         height: 12px
+    //         border-radius: 20px
+    //         background-color: #e3e3e3
+  .panel-logistics
+    padding-bottom: $horizontal-gatter
+    position: relative
+    +respond-to(extra-small)
+      margin-bottom: $horizontal-gatter
+      border-bottom: 1px solid $panel-border-color
+    .exchange
+      position: absolute
+      right: 0
+      top: 14px
+      width: 10px
+      height: 50px
+      border: 1px solid #e6e6e6
+      border-left-width: 0
+      > a
+        position: absolute
+        top: 15px
+        margin-left: 2px
+        display: block
+        width: 17px
+        text-align: center
+        text-decoration: none
+        color: #fff
+        background-color: #ccc
+    .form-group
+      margin-bottom: 10px
+      +respond-to(extra-small)
+        +margin-horizontal(0)
+    .control-label
+      +padding-horizontal(0)
+      // +font-size(14)
+      text-align: right
+      font-weight: normal
+      .icon
+        margin-right: 5px
+        vertical-align: middle
+    .tips
+      padding-left: 10px
+      color: #888
+    .button-group
+      padding-right: 15px
+      +respond-to-min(small)
+        padding-right: 30px
+      text-align: right
+      .btn
+        +padding-horizontal(2em)
+        &.btn-primary
+          border-color: darken(#f25555, 7)
+          background-color: #f25555
+          &:hover
+            background-color: darken(#f25555, 5)
+          &>.glyphicon
+            margin-right: 10px
+            vertical-align: baseline
+    .tooltip.bottom .tooltip-arrow
+      // border-bottom-color: #FF7300
+    .tooltip-inner
+      padding: 5px 15px
+      font-family: "Microsoft YaHei",SimHei,Arial,sans-serif
+      +font-size(14)
+      // background-color: #FF7300
+    h3.popover-title
+      margin: 0
+      padding: 8px 14px
+      +font-size(14)
+      border-left-width: 0
+      >i
+        margin-top: -4px
+        +font-size(18)
+        cursor: pointer
+
+  .panel-bid
+    +padding-horizontal(10px)
+    padding-bottom: $horizontal-gatter
+    +respond-to(small)
+      margin-left: -2 * $epipe-gatter
+      border: 1px solid $panel-border-color
+      border-left-width: 0 !important
+    h3
+      margin-left: 0
+  .panel-talents
+    +margin-vertical($horizontal-gatter)
+    +padding-horizontal(1em)
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    h3
+      margin-left: 0
+    .talents-content
+      overflow: hidden
+      max-height: 262px
+    .post
+      padding-left: 15px
+      color: #888
+  .panel-company
+    margin-top: $horizontal-gatter
+    border: 1px solid $panel-border-color
+    min-height: 313px
+    .company-content
+      height: 262px
+      overflow: hidden
+      border-top: 1px solid #e3e3e3
+      .company-logo
+        // +padding-vertical(10px)
+        border-right: 1px solid #e3e3e3
+        border-bottom: 1px solid #e3e3e3
+        text-align: center
+        img
+          margin-top: 10px
+          margin-bottom: 10px
+          width: 100%
+          // min-height: 45px
+          max-height: 45px
+  .panel-technology
+    margin-top: $horizontal-gatter
+    margin-bottom: $horizontal-gatter
+    position: relative
+    min-height: 313px
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    +respond-to(small)
+      margin-left: -30px
+    .exchange
+      position: absolute
+      top: 15px
+      right: 15px
+    .item
+      +padding-horizontal(10px)
+    .info
+      position: relative
+      .portrait
+        padding: 3px
+        position: relative
+        z-index: 1
+        width: 50px
+        height: 50px
+        border: 1px solid #d6d6d6
+        border-radius: 50px
+        background-color: #fff
+        &:before
+          content: ""
+          position: absolute
+          margin-left: 12px
+          margin-top: 44px
+          width: 0
+          height: 0
+          border-top: 7px solid #d6d6d6
+          border-left: 9px solid transparent
+          border-right: 9px solid transparent
+        &:after
+          content: ""
+          position: absolute
+          margin-left: -30px
+          margin-top: 43px
+          width: 0
+          height: 0
+          border-top: 7px solid #fff
+          border-left: 9px solid transparent
+          border-right: 9px solid transparent
+        img
+          width: 42px
+          height: 40px
+          border-radius: 40px
+      .time
+        +padding-horizontal(15px)
+        margin-top: -35px
+        margin-left: 37px
+        position: absolute
+        display: inline-block
+        border-radius: 10px
+        line-height: 1.6
+        color: #fff
+        background-color: #90c0db
+        > span
+          +padding-horizontal(5px)
+      .source
+        position: absolute
+        right: 5px
+        top: 16px
+        >a
+          color: #258
+    .h5
+      padding-left: 4em
+      display: block
+      +text-overflow
+      color: #444
+      &:before
+        content: ""
+        margin-top: 6px
+        margin-left: -6px
+        +list-style(3px,#a9a9a9)
+      &:hover
+        font-weight: bold
+        text-decoration: none
+    p
+      padding-left: 4em
+      +font-size(12)
+      max-height: 34px
+      overflow: hidden
+      color: #888
+  .panel-product
+    margin-top: $horizontal-gatter
+    border: 1px solid #e0e0e0
+    +respond-to-min(small)
+      +margin-horizontal(-$epipe-gatter)
+    h3
+      margin-top: 10px
+      margin-left: 8px
+      padding-left: 10px
+      border-left: 4px solid #ff7300
+      +font-size(18)
+      font-weight: bold
+    .product-classify
+      position: absolute
+      top: 28px
+      left: 85px
+    .panel-inner-product
+      border-top: 1px solid #e0e0e0
+      // +font-size(14)
+      >ol 
+        top: -35px
+        bottom: initial
+        left: 215px
+        display: none
+        width: 100%
+        +respond-to-min(medium)
+          display: block
+        >li
+          padding: 3px 8px
+          margin-left: 20px
+          +inline-block
+          border: 1px solid #e6e9ea
+          width: auto
+          height: auto
+          text-indent: 0
+          border-radius: 8px
+          color: #333
+          background-color: #fff
+          &.active
+            border-color: #FF7300
+            padding: 4px 9px
+      p>a
+        color: #333
+      .product-item
+        // min-height: 95px
+        p
+          height: 40px
+          overflow: hidden
+      .main-product
+        img
+          margin: 15px auto 17px
+          height: 185px
+        p
+          margin-top: 15px
+        strong
+          display: block
+          // +padding-vertical(5px)
+      .minor-product
+        .product-item
+          &+.product-item
+            border-top: 1px solid #e6e6e6
+          img
+            float: left
+            margin-right: 5px
+            +margin-vertical(15px)
+            width: 85px
+            height: 70px
+          p
+            margin-top: 15px
+            width: 60%
+            float: right
+          strong
+            // +padding-vertical(5px)
+            float: left
+        +respond-to-max(small)
+          &:last-child>.product-item
+            border-top: 1px solid #e6e6e6
+  .panel-recommend
+    margin-top: $horizontal-gatter
+    +padding-horizontal(10px)
+    padding-top: 10px
+    padding-bottom: 15px
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    +respond-to(small)
+      margin-left: -15px
+    h3
+      margin-left: 0
+    .ul-link-group
+      border-top: 1px solid $panel-border-color
+      .ul-link-list
+        float: left
+        width: 50%
+
+// .s-sprite, .s-exchange, .s-hollow-mark, .s-mark, .s-new, .flora-index .panel-cyclopedia .ul-link-list li.new:after, .s-notepad, .s-topic
+//   background-image: url('/content/images/s-s811896e3a3.png')
+//   background-repeat: no-repeat
+// .s-exchange
+//   background-position: 0 0
+//   height: 14px
+//   width: 14px
+// .s-hollow-mark
+//   background-position: 0 -19px
+//   height: 16px
+//   width: 14px
+// .s-mark
+//   background-position: 0 -40px
+//   height: 16px
+//   width: 14px
+// .s-new, .flora-index .panel-cyclopedia .ul-link-list li.new:after
+//   background-position: 0 -61px
+//   height: 16px
+//   width: 16px
+// .s-notepad
+//   background-position: 0 -82px
+//   height: 16px
+//   width: 14px
+// .s-topic
+//   background-position: 0 -103px
+//   height: 16px
+//   width: 32px

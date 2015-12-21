@@ -1,0 +1,243 @@
+@import "mixin"
+$panel-border-color: #eee
+$horizontal-gatter: 15px
+$epipe-gatter: 15px
+.flora-dynamic
+	+respond-to-min(small)
+		.edge-left
+			padding-left: 0
+		.edge-right
+			padding-right: 0
+	+respond-to(small)
+		.edge-right
+			padding-left: 0
+	.ul-link-list
+		padding-left: 0
+		list-style-type: none
+		li
+			position: relative
+			padding-left: 1em
+			// +font-size(14)
+			+text-overflow
+			line-height: 2
+			&:before
+				content: ""
+				margin-top: 12px
+				margin-left: -0.7em
+				+list-style(3px, #888)
+			a
+				color: #333
+			>.right
+				position: absolute
+				right: 0
+	.panel-primary
+		padding-top: 0
+		>.panel-title
+			// padding-left: 10px
+			// border-left: 4px solid #ff7300
+			padding: 5px 25px
+			border: 1px solid $panel-border-color
+			+font-size(18)
+			&:before
+				content: ''
+				position: absolute
+				margin-left: -15px
+				margin-top: 3px
+				display: inline-block
+				width: 4px
+				height: 18px
+				background-color: #ff7300
+		>.panel-content
+			border: 1px solid $panel-border-color
+			border-top-width: 0
+
+	.panel-bar
+		margin-top: 15px
+		>.panel-title
+			padding-left: 0
+			margin-bottom: 15px
+			line-height: 1.8
+			+font-size(18)
+			border-bottom: 3px solid #ff7300		
+	.panel-headline
+		.headline-items
+			>.item
+				>h2
+					color: #fff
+					@extend %text-overflow
+					>a
+						+font-size(24)
+						color: #333
+				>p
+					color: #888
+		.news-items
+			ul>li
+				.new-classfy
+					color: #888
+					margin-right: 5px
+				.new-title
+					color: #333
+	
+
+	.owl-custom
+		+padding-horizontal(0)
+		margin-bottom: 5px
+		img
+			width: 100%
+			display: block
+			// &:hover
+				// animation: scale 1s
+				// @at-root
+				// 	+keyframes(scale)
+				// 		0%,100%
+				// 			transform: scale(1,1)
+				// 		50%  
+				// 			transform: scale(1.3,1.3)  
+		.owl-item
+			// padding-right: 10px
+			+padding-horizontal(5px)
+			&>div
+				position: relative
+				overflow: hidden
+			.title
+				position: absolute
+				bottom: 0
+				+padding-vertical(6px)
+				width: 100%
+				+font-size(12)
+				+text-overflow
+				text-align: center
+				text-decoration: none
+				color: #fff
+				background-color: rgba(#000, .4)
+				&:hover
+					background-color: rgba(#000, .8)
+		.owl-controls
+			position: absolute
+			top: -35px
+			right: 25px
+			.owl-page
+				display: inline-block
+				zoom: 1
+				cursor: pointer
+				&.active span
+					background-color: #ff7300
+				span
+					margin: 0 5px
+					display: block
+					width: 12px
+					height: 12px
+					border-radius: 20px
+					background-color: #e3e3e3
+	.panel-banner
+		img
+			// width: 100%
+	.panel-exhibition
+		.owl-custom>.owl-controls
+			top: -37px
+	.panel-special
+		.special-items
+			.items
+				margin-bottom: 30px
+				.item-img
+					padding-left: 0
+				.item-text
+					+padding-horizontal(0)
+					>h2
+						margin-top: 0
+						@extend %text-overflow
+						color: #fff
+						>a
+							+font-size(24)
+							color: #333
+					>p
+						line-height: 2
+						color: #888
+					.zan
+						float: right
+						display: inline-block
+						padding: 3px 8px
+						letter-spacing: 2px
+						border: 1px solid #dfdfdf
+						cursor: pointer
+						color: #c1c1c1
+						&.active
+							border-color: #ff7300
+							color: #ff7300
+							>.glyphicon
+								animation: bubble-zan 1s
+								@at-root
+									+keyframes(bubble-zan)
+										0%
+											opacity: 1
+											transform: translate(0,0)
+										80%
+											opacity: 0
+											transform: translate(0,-30px)
+										81%
+											transform: translate(0,0)
+
+
+
+	.panel-material
+		max-height: 260px
+		overflow-y: hidden
+		+respond-to(small)
+			border-top: 1px solid $panel-border-color
+		+respond-to(extra-small)
+			max-height: 280px
+		.table
+			margin-bottom: 0
+			+font-size(12)
+			&.table-thead
+				margin-top: 10px
+				position: relative
+				thead
+					background-color: #fdf1e7
+					th
+						+padding-vertical(10px)
+						border-bottom-width: 0
+			&.table-tbody
+				margin-bottom: 8px
+			.up 
+				color: #f00
+			.down
+				color: #2f802f
+
+	.panel-recommend
+		margin-top: $horizontal-gatter
+		h3
+			margin-left: 0
+		>.panel-content
+			padding: 10px
+		.ul-link-group
+			border-top: 1px solid $panel-border-color
+			.ul-link-list
+				float: left
+				width: 50%
+
+	.panel-company
+		margin-top: $horizontal-gatter
+		margin-bottom: 20px
+		min-height: 190px
+		// border-top: 1px solid $panel-border-color
+		border-bottom-width: 0
+		.company-content
+			height: 133px
+			+respond-to(medium)
+				height: 124px
+			overflow: hidden
+			// border-top: 1px solid #e3e3e3
+			border-bottom-width: 0
+			.company-logo
+				// +padding-vertical(10px)
+				margin-left: -1px
+				border-left: 1px solid #e3e3e3
+				border-bottom: 1px solid #e3e3e3
+				text-align: center
+				img
+					margin-top: 10px
+					margin-bottom: 10px
+					width: 100%
+					// min-height: 45px
+					max-height: 45px

@@ -1,0 +1,534 @@
+.iconfont {
+  display: inline-block;
+  line-height: 1;
+}
+
+.com-profile-header {
+  position: relative;
+  padding: 0.7em 0 1em;
+  z-index: 1;
+  box-shadow: 0 1px 5px #9E9E9E;
+}
+.com-profile-header .accout-group {
+  line-height: 48px;
+  text-align: right;
+}
+.com-profile-header .accout-group a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.car-assistant .banner {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .car-assistant .banner {
+    height: 411px;
+  }
+}
+.car-assistant .banner > img.big {
+  position: absolute;
+  left: 50%;
+  margin-left: -950px;
+  display: none;
+}
+.car-assistant .row-strengths {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .row-strengths {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.car-assistant .row-strengths .title {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 2;
+  color: #000;
+}
+.car-assistant .row-strengths .item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .row-strengths .item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.car-assistant .row-strengths .item .color-block {
+  padding: 30px 0;
+}
+.car-assistant .row-strengths .item .color-block.info {
+  background-color: #59b3d8;
+}
+.car-assistant .row-strengths .item .color-block.profession {
+  background-color: #eab63e;
+}
+.car-assistant .row-strengths .item .color-block.resource {
+  background-color: #ea717a;
+}
+.car-assistant .row-strengths .item .color-block.serve {
+  background-color: #49c9c8;
+}
+.car-assistant .row-strengths .item .color-block i {
+  padding: 15px;
+  border-radius: 100px;
+  font-size: 50px;
+  font-size: 5rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.car-assistant .row-strengths .item .describle {
+  margin-top: 10px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.car-assistant .set-serve {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .set-serve {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.car-assistant .set-serve h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 28px;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #000;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .set-serve h2 {
+    margin-bottom: 20px;
+  }
+}
+.car-assistant .set-serve h2:before, .car-assistant .set-serve h2:after {
+  content: "";
+  margin-top: 14px;
+  position: absolute;
+  display: inline-block;
+  width: 3.5em;
+  height: 1px;
+  background-color: #b7b7b7;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .set-serve h2:before, .car-assistant .set-serve h2:after {
+    width: 2em;
+  }
+}
+.car-assistant .set-serve h2:before {
+  left: 50%;
+  margin-left: -6em;
+}
+@media only screen and (max-width: 767px) {
+  .car-assistant .set-serve h2:before {
+    margin-left: -4.5em;
+  }
+}
+.car-assistant .set-serve h2:after {
+  margin-left: 0.5em;
+}
+.car-assistant .set-serve .text {
+  margin-top: 50px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.car-assistant .set-serve .text > span {
+  color: #ff510c;
+}
+
+.resource-clerk .banner {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .resource-clerk .banner {
+    height: 359px;
+  }
+}
+.resource-clerk .banner > img.big {
+  position: absolute;
+  left: 50%;
+  margin-left: -950px;
+  display: none;
+}
+.resource-clerk .block-clerk-profile {
+  padding-top: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-clerk-profile {
+    padding-top: 20px;
+  }
+}
+.resource-clerk .block-clerk-profile p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  text-indent: 2em;
+  color: #000;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-clerk-profile p {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+.resource-clerk .block-relationship {
+  padding-top: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-relationship {
+    padding-top: 20px;
+  }
+}
+.resource-clerk .block-relationship img {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  .resource-clerk .block-relationship img {
+    margin-top: 38px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .resource-clerk .block-relationship img {
+    margin-top: 70px;
+  }
+}
+.resource-clerk .block-relationship .content-wrap {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.resource-clerk .block-relationship .content-wrap .content {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #000;
+}
+.resource-clerk .block-relationship .content-wrap .content.efficiency {
+  background-color: #00aff2;
+}
+.resource-clerk .block-relationship .content-wrap .content.data {
+  background-color: #01bfa6;
+}
+.resource-clerk .block-relationship .content-wrap .content.manpower {
+  background-color: #e96862;
+}
+.resource-clerk .block-relationship .content-wrap .content.department {
+  background-color: #f8be38;
+}
+.resource-clerk .block-relationship .content-wrap .content.product {
+  background-color: #f19100;
+}
+.resource-clerk .block-relationship .content-wrap .content.bid {
+  background-color: #8d55a0;
+}
+.resource-clerk .block-relationship .content-wrap .content > strong {
+  display: block;
+  font-weight: normal;
+  font-size: 30px;
+  font-size: 3rem;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-relationship .content-wrap .content > strong {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+.resource-clerk .block-relationship .content-wrap .content > div {
+  display: inline-block;
+  max-width: 100px;
+  min-height: 52px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-relationship .content-wrap .content > div {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+.resource-clerk .block-price {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .resource-clerk .block-price > .left {
+    padding-right: 30px;
+  }
+  .resource-clerk .block-price > .right {
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price > .right {
+    margin-top: 15px;
+  }
+}
+.resource-clerk .block-price .content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #ffe7dd;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .resource-clerk .block-price .content {
+    padding-left: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price .content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.resource-clerk .block-price .content:before, .resource-clerk .block-price .content:after {
+  content: " ";
+  display: table;
+}
+.resource-clerk .block-price .content:after {
+  clear: both;
+}
+.resource-clerk .block-price .content > .price {
+  text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .resource-clerk .block-price .content > .price {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+.resource-clerk .block-price .content > .price > div {
+  font-size: 30px;
+  font-size: 3rem;
+  color: #ff500d;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price .content > .price > div {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .resource-clerk .block-price .content > .price > div {
+    font-size: 26px;
+    font-size: 2.6rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .resource-clerk .block-price .content > .price > div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.resource-clerk .block-price .content > .price > del {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #a0a0a0;
+}
+.resource-clerk .block-price .content > .info > strong {
+  font-size: 26px;
+  font-size: 2.6rem;
+  color: #000;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price .content > .info > strong {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+.resource-clerk .block-price .content > .info > p {
+  margin-bottom: 0;
+  min-height: 112px;
+  line-height: 2;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 767px) {
+  .resource-clerk .block-price .content > .info > p {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+.ad-plan {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.ad-plan h2 {
+  position: relative;
+  font-size: 26px;
+  font-size: 2.6rem;
+  text-align: center;
+  color: #000;
+}
+.ad-plan h2:before, .ad-plan h2:after {
+  content: "";
+  margin-top: 14px;
+  position: absolute;
+  display: inline-block;
+  width: 3.5em;
+  height: 1px;
+  background-color: #b7b7b7;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan h2:before, .ad-plan h2:after {
+    width: 2em;
+  }
+}
+.ad-plan h2:before {
+  position: absolute;
+  left: 50%;
+  margin-left: -6em;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan h2:before {
+    margin-left: -4.5em;
+  }
+}
+.ad-plan h2:after {
+  margin-left: 0.5em;
+}
+.ad-plan .banner {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  .ad-plan .banner {
+    height: 490px;
+  }
+}
+.ad-plan .banner > img.big {
+  position: absolute;
+  left: 50%;
+  margin-left: -950px;
+  display: none;
+}
+.ad-plan .complany-profile {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #5d5d5d;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan .complany-profile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.ad-plan .complany-profile p {
+  text-indent: 2em;
+}
+.ad-plan .row-strengths {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan .row-strengths {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.ad-plan .row-strengths .row > h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan .row-strengths .row > h2 {
+    margin-bottom: 20px;
+  }
+}
+.ad-plan .row-strengths .row > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+.ad-plan .row-strengths .row > div > .color-block {
+  padding: 30px 0;
+}
+.ad-plan .row-strengths .row > div > .color-block.info {
+  background-color: #f8be38;
+}
+.ad-plan .row-strengths .row > div > .color-block.profession {
+  background-color: #e96862;
+}
+.ad-plan .row-strengths .row > div > .color-block.resource {
+  background-color: #01bfa6;
+}
+.ad-plan .row-strengths .row > div > .color-block.serve {
+  background-color: #00aff2;
+}
+.ad-plan .row-strengths .row > div > .color-block .shade-layer {
+  padding-top: 15px;
+}
+.ad-plan .row-strengths .row > div > .color-block .shade-layer i {
+  padding: 30px;
+  border-radius: 100px;
+  font-size: 50px;
+  font-size: 5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.ad-plan .set-serve {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan .set-serve {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.ad-plan .set-serve h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .ad-plan .set-serve h2 {
+    margin-bottom: 20px;
+  }
+}
+.ad-plan .set-serve .table {
+  font-size: 14px;
+  font-size: 1.4rem;
+  border-color: #000;
+}
+.ad-plan .set-serve .table thead th {
+  font-size: 16px;
+  font-size: 1.6rem;
+  border-bottom-width: 1px;
+  border-color: #000;
+  color: #fff;
+  background-color: #f90;
+}
+.ad-plan .set-serve .table tbody td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  vertical-align: middle;
+  border-color: #000;
+  color: #333;
+  background-color: #ffffcd;
+}
+.ad-plan .set-serve .text {
+  padding-top: 15px;
+}

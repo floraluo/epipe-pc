@@ -1,0 +1,261 @@
+@import "mixin"
+$panel-border-color: #eee
+$horizontal-gatter: 15px
+$epipe-gatter: 15px
+%panel-side-box
+  border-left: 1px solid $panel-border-color
+  border-right: 1px solid $panel-border-color
+
+html
+  font-size: 62.5%
+  +respond-to(extra-small)
+    font-size: 75%
+body
+  font-family: "Microsoft YaHei",SimHei,Arial,sans-serif
+.icon
+  @extend %icon
+
+// start part of head navigation
+.head-nav
+  +font-size(12)
+  +respond-to-max(small)
+    margin-top: 45px
+  .container
+    margin-bottom: 10px
+    border-bottom: 7px solid #ff7300
+    background-color: #f7f7f7
+    .row   
+      padding-top: 15px
+  .nav-list 
+    margin-bottom: 10px
+    +respond-to(extra-small)
+      width: 25%
+      text-align: center
+    img
+      +respond-to-min(small)
+        float: left
+    &+.nav-list
+      padding-left: 2em
+      margin-left: 3.5em
+      border-left: 1px solid #a0a0a0
+      +respond-to(medium)     
+        padding-left: 2em
+        margin-left: 2.5em
+      +respond-to(small)
+        padding-left: 4em
+        margin-left: 4em
+      +respond-to(extra-small)
+        padding-left: 0
+        margin-left: 0
+    .nav-item
+      padding-left: 1em
+      display: none
+      // +font-size(14)
+      line-height: 1.9
+      color: #434343
+      +respond-to-min(medium)
+        display: inline
+        padding-left: 1em
+      &:hover
+        text-decoration: none
+        color: #ff500b  
+  .nav-placeholder
+    margin-right: -$epipe-gatter
+    +respond-to(extra-small)
+      display: none
+    +respond-to(medium)
+      display: none
+// end part of head navigation
+
+.row-head-top
+  border-bottom: 1px solid #ddd
+  line-height: 30px
+  +font-size(12)
+  color: #666
+  background-color: #f7f7f7
+  a 
+    color: #808080
+
+// start part of head search
+.row-head-search
+  +respond-to-max(small)
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 100
+  .menu
+    position: relative
+    z-index: 1
+    +clearfix
+    height: 50px
+    width: 100%
+    color: #fff
+    .container
+      background-color: #ff7300
+    .icon-ept
+      position: absolute
+      top: -38px
+      +font-size(95)
+      color: #fff
+      +respond-to(extra-small)
+        top: -48px
+    .user
+      color: #fff
+      >.icon-person
+        +font-size(28)
+        vertical-align: 9%
+    .right
+      line-height: 50px
+      text-align: right
+      font-size: 28px
+      >span
+        margin-left: 15px
+  .head-search.active
+    +respond-to-max(small)
+      padding-bottom: 15px    
+      // position: fixed
+      top: -50px
+      display: block !important
+      border: 1px solid #FF7300
+      border-top-width: 0
+      // z-index: 100
+      background-color: #fff
+  .search-nav
+    padding-left: 0
+    margin-top: 20px
+    list-style: none
+    +clearfix
+    >li
+      float: left
+      >a 
+        +font-size(12)
+        text-decoration: none
+        color: #333
+        &:hover
+          color: #999
+      &.active>a
+        cursor: default
+        color: #fe7501
+        &:hover
+          color: #fe7501
+      &+li
+        >a 
+          padding-left: 1em
+          margin-left: 1em
+          border-left: 1px solid #ccc
+          +respond-to(extra-small)
+            padding-left: 10px
+            margin-left: 10px
+
+  .search-input
+    $search-box-color: #FF6325
+    position: relative
+    .form-control
+      border-radius: 0
+      border-color: $search-box-color
+      &:focus
+        border-color: $search-box-color
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,99,37,.6)
+    .btn-warning
+      position: absolute
+      top: 0
+      right: 0
+      +padding-horizontal(2em)
+      border-radius: 0
+      border-color: $search-box-color
+      background-color: #FF6426
+      &:hover,&:focus
+        border-color: darken($search-box-color, 12%)
+        background-color: darken(#FF6426, 10%)
+// end part of head search
+
+// start part of footer
+.row-footer
+  $footer-color: #bebdbd
+  $footer-link-color: #808080
+  padding-top: 35px
+  color: $footer-color
+  background-color: #393939
+  a 
+    color: $footer-link-color
+    text-decoration: none
+    &:hover
+      color: #ff7300
+  li
+    list-style: none
+    +font-size(14)
+    font-weight: bold
+    color: #fff
+    >a
+      font-weight: normal
+      +font-size(12)
+  .footer-logo
+    padding-left: 0
+    .li-logo
+      line-height: .3
+      .icon-ept
+        +font-size(140)
+        font-weight: normal
+    a 
+      +font-size(28)
+      font-weight: bold
+  .footer-friend-link
+    line-height: 2
+    .title
+      border-bottom: 1px solid #555
+    ul 
+      padding-left: 0
+      +clearfix
+      >li 
+        float: left
+        padding-right: 1em
+        padding-left: .5em
+  .text-bottom
+    padding-top: 10px
+    padding-bottom: 30px
+    text-align: center
+// end part of footer
+
+// start city linkage
+.linkage-wrap
+  position: absolute
+  z-index: 1071
+  padding-right: 30px
+  width: 100%
+  >.linkage
+    margin-top: -1px
+    border: 1px solid rgba(#000, .15)
+    border-top-width: 0
+    border-radius: 4px
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+    background-color: #fff
+    display: none
+    &.active
+      display: block
+    .linkage-tab 
+      li
+        >a
+          color: #555
+          >em
+            font-style: normal
+            font-weight: bold
+            font-size: (14)
+        &:first-child
+          >a 
+            border-left-color: transparent
+        &.active
+          a
+            color: #ff7300
+    .area-list
+      padding: 10px .5em 0
+      +clearfix
+      list-style: none
+      li
+        padding: 4px 8px
+        float: left
+        border-radius: 4px
+        &:hover
+          cursor: pointer
+          color: #fff
+          background-color: #ff7300
+// end city linkage

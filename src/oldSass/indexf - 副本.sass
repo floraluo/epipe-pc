@@ -1,0 +1,589 @@
+@import "compass/css3"
+@import "mixin"
+@import "sprite"
+$panel-border-color: #eee
+$horizontal-gatter: 15px
+$epipe-gatter: 10px
+%panel-side-box
+  border-left: 1px solid $panel-border-color
+  border-right: 1px solid $panel-border-color
+
+html
+  font-size: 62.5%
+  font-family: "Microsoft YaHei",SimHei,Arial,sans-serif
+body.index-body .flora-index
+  font: 12px/1.42857143 "Microsoft YaHei",SimHei,Arial,sans-serif
+  font-size: 1.2rem
+  line-height: 1.42857143
+  // font-family: "Microsoft YaHei",SimHei,Arial,sans-serif
+.icon
+  @extend %icon
+
+.index-body .flora-index
+  a:hover,a:focus
+    text-decoration: underline
+  a.btn:hover,a.btn:focus
+    text-decoration: none
+  .img-responsive
+    width: auto
+.flora-index
+  //epipe
+  .fl 
+    float: left
+  .fr
+    float: right
+  .btn
+    display: inline-block
+    padding: 6px 12px
+    margin-bottom: 0
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.42857143
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    cursor: pointer
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    background-image: none
+    border: 1px solid transparent
+    border-radius: 4px
+    &.btn-default
+      border-color: #ccc
+  input[type='text']
+    +border-radius(4px)
+    border: 1px solid #ccc
+.head-nav
+  .container
+    margin-bottom: 10px
+    border-bottom: 7px solid #ff7300
+    background-color: #f7f7f7
+    .row   
+      padding-top: 15px
+  .nav-list 
+    margin-bottom: 15px
+    +respond-to(extra-small)
+      width: 25%
+      text-align: center
+    img
+      +respond-to-min(small)
+        float: left
+    &+.nav-list
+      padding-left: 1em
+      margin-left: 2em
+      border-left: 1px solid #a0a0a0        
+      +respond-to(extra-small)
+        padding-left: 0
+        margin-left: 0
+    .nav-item
+      padding-left: 1em
+      display: none
+      +font-size(14)
+      line-height: 1.8
+      color: #434343
+      +respond-to-min(medium)
+        display: inline
+        padding-left: .5em
+      &:hover
+        text-decoration: none
+        color: #ff500b  
+  .nav-placeholder
+    margin-right: -$epipe-gatter
+    +respond-to(extra-small)
+      display: none
+    +respond-to(medium)
+      display: none
+.index-body .flora-index
+  .container
+    background-color: #fff
+  +respond-to(extra-small)
+    .bar-row
+      +margin-horizontal(0)
+  .ul-link-list
+    padding-left: 1em
+    list-style-type: none
+    li
+      position: relative
+      +font-size(14)
+      +text-overflow
+      line-height: 2
+      &:before
+        content: ""
+        margin-top: 12px
+        margin-left: -0.7em
+        +list-style(3px, #888)
+      a
+        color: #333
+      >.right
+        position: absolute
+        right: 0
+  .panel-left
+    +respond-to-min(small)
+      padding-left: 0
+      padding-right: 2 * $epipe-gatter
+    &>div
+      @extend %panel-side-box
+  .panel-right
+    +respond-to-min(small)
+      padding-right: 0
+      padding-left: 2 * $epipe-gatter
+    &>div
+      @extend %panel-side-box
+  .panel-primary
+    padding-top: 20px
+    height: 100%
+    h3
+      margin-left: 8px
+      margin-top: 0
+      padding-left: 10px
+      border-left: 4px solid #ff7300
+      +font-size(18)
+  
+  .main-block
+    +respond-to-min(small)
+      +padding-horizontal(0)
+    .panel-primary
+      +respond-to(extra-small)
+        border-left: 1px solid $panel-border-color
+        border-right: 1px solid $panel-border-color
+  .panel-banner
+    .banner-theme
+      position: absolute
+      bottom: 0
+      +padding-vertical(10px)
+      width: 100%
+      +font-size(14)
+      font-weight: bold
+      text-align: center
+      color: #1ec9b7
+      background-color: #eee
+    .owl-banner
+      // border: 1px solid $panel-border-color
+      // border-bottom-width: 0
+      border-top: 1px solid $panel-border-color
+      img
+        width: 100%
+      .owl-controls
+        position: absolute
+        bottom: 40px
+        width: 100%
+        text-align: center
+        .owl-page
+          display: inline-block
+          zoom: 1
+          cursor: pointer
+          &.active span
+            opacity: 1
+          span
+            margin: 0 5px
+            display: block
+            width: 12px
+            height: 12px
+            border-radius: 20px
+            opacity: .5
+            background-color: #fff
+  .news-list
+    h3
+      margin-bottom: 15px
+    p
+      color: #888
+      line-height: 1.6
+    ul>li
+      .new-classfy
+        color: #888
+        margin-right: 5px
+      .new-title
+        color: #333
+  .panel-sign
+    // border: 1px solid $panel-border-color
+    // border-bottom-width: 0
+    border-top: 1px solid $panel-border-color
+    .sign-entrance
+      +padding-vertical(10px)
+      background-color: #fdf1e7
+      a
+        +padding-horizontal(1.8em)
+        +respond-to(medium)
+          +padding-horizontal(1em)
+        +respond-to(extra-small)
+          +padding-horizontal(1.1em)
+        display: inline-block
+        color: #ff500b
+        +font-size(14)
+        &+a
+          border-left: 1px solid #ff500b
+    .img-responsive
+      width: 100%
+  .panel-topic
+    +padding-horizontal(10px)
+    padding-top: 10px
+    // @extend %panel-side-box
+    h4
+      font-weight: bold
+      .icon
+        vertical-align: middle
+      a
+        color: #333
+    p
+      line-height: 1.6
+      color: #888
+      &.brief
+        margin-bottom: 0
+  .panel-cyclopedia
+    padding-top: 20px
+    +respond-to(extra-small)
+      border: 1px solid $panel-border-color
+    .cyc-title
+      clear: both
+      &>a
+        padding: 3px 1em
+        // margin-bottom: 8px
+        display: inline-block
+        +font-size(14)
+        text-decoration: none
+        color: #fff 
+        &.cyc-title-a
+          background-color: #ffae00
+          &:hover
+            background-color: darken(#ffae00, 5)
+        &.cyc-title-b
+          background-color: #1ec9b7
+          &:hover
+            background-color: darken(#1ec9b7, 5)
+    .ul-link-list
+      position: relative
+      width: 49%
+      li
+        // line-height: 1.7
+        &.new
+          padding-right: 1.5em
+          &:after
+            content: ""
+            position: absolute
+            right: 0
+            margin-top: 3px
+            display: inline-block
+            @extend .s-new
+  .panel-material
+    +respond-to(small)
+      border-top: 1px solid $panel-border-color
+    .table
+      margin-bottom: 8px
+      thead
+        background-color: #fdf1e7
+        th
+          border-bottom-width: 0
+      .up 
+        color: #f00
+      .down
+        color: #2f802f
+  .panel-exhibition
+    +padding-horizontal(10px)
+    padding-bottom: $horizontal-gatter
+    +respond-to(small)
+      margin-right: -2 * $epipe-gatter
+      border: 1px solid $panel-border-color
+    h3
+      margin-left: 0
+    @at-root .owl-custom
+      margin-bottom: 15px
+      img
+        width: 100%
+        display: block
+        &:hover
+          +animation(scale 1s)
+          @at-root
+            +keyframes(scale)
+              0%,100%
+                +scale(1,1)
+              50%
+                +scale(1.3,1.3)        
+      .owl-item
+        // padding-right: 10px
+        +padding-horizontal(5px)
+        &>div
+          position: relative
+          overflow: hidden
+        .title
+          position: absolute
+          bottom: 0
+          +padding-vertical(6px)
+          width: 100%
+          +text-overflow
+          text-align: center
+          text-decoration: none
+          color: #fff
+          background-color: rgba(#000, .4)
+          &:hover
+            background-color: rgba(#000, .8)
+      .owl-controls
+        position: absolute
+        top: -27px
+        right: 25px
+        .owl-page
+          display: inline-block
+          zoom: 1
+          cursor: pointer
+          &.active span
+            background-color: #ff7300
+          span
+            margin: 0 5px
+            display: block
+            width: 12px
+            height: 12px
+            border-radius: 20px
+            background-color: #e3e3e3
+  .panel-logistics
+    padding-bottom: $horizontal-gatter
+    position: relative
+    +respond-to(extra-small)
+      margin-bottom: $horizontal-gatter
+      border-bottom: 1px solid $panel-border-color
+    .exchange
+      position: absolute
+      right: 0
+      top: 14px
+      width: 10px
+      height: 50px
+      border: 1px solid #e6e6e6
+      border-left-width: 0
+      > a
+        position: absolute
+        top: 15px
+        margin-left: 2px
+        display: block
+        width: 17px
+        text-align: center
+        text-decoration: none
+        color: #fff
+        background-color: #ccc
+    .form-group
+      margin-bottom: 10px
+      +respond-to(extra-small)
+        +margin-horizontal(0)
+    .control-label
+      +padding-horizontal(0)
+      +font-size(14)
+      text-align: right
+      font-weight: normal
+      .icon
+        margin-right: 5px
+        vertical-align: middle
+    .tips
+      padding-left: 10px
+      color: #888  
+    .button-group
+      padding-right: 15px
+      +respond-to-min(small)
+        padding-right: 30px
+      text-align: right
+      .btn
+        +padding-horizontal(2em)
+        &.btn-primary
+          border-color: darken(#f25555, 7)
+          background-color: #f25555
+          &:hover
+            background-color: darken(#f25555, 5)
+          &>.glyphicon
+            margin-right: 10px
+            vertical-align: baseline
+  .panel-bid
+    +padding-horizontal(10px)
+    padding-bottom: $horizontal-gatter
+    +respond-to(small)
+      margin-left: -2 * $epipe-gatter
+      border: 1px solid $panel-border-color
+      border-left-width: 0 !important
+    h3
+      margin-left: 0
+  .panel-talents
+    +margin-vertical($horizontal-gatter)
+    +padding-horizontal(1em)
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    h3
+      margin-left: 0
+    .post
+      color: #888
+  .panel-company
+    margin-top: $horizontal-gatter
+    border: 1px solid $panel-border-color
+    .company-logo
+      +padding-vertical(15px)
+      border-right: 1px solid #e3e3e3
+      border-bottom: 1px solid #e3e3e3
+      text-align: center
+  .panel-technology
+    margin-top: $horizontal-gatter
+    margin-bottom: $horizontal-gatter
+    position: relative
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    +respond-to(small)
+      margin-left: -30px
+    .exchange
+      position: absolute
+      top: 15px
+      right: 15px
+    .item
+      +padding-horizontal(10px)
+    .info
+      position: relative
+      .portrait
+        padding: 3px
+        position: relative
+        z-index: 1
+        width: 50px
+        height: 50px
+        border: 1px solid #d6d6d6
+        +border-radius(50px)
+        background-color: #fff
+        &:before
+          content: ""
+          position: absolute
+          margin-left: 12px
+          margin-top: 44px
+          width: 0
+          height: 0
+          border-top: 7px solid #d6d6d6
+          border-left: 9px solid transparent
+          border-right: 9px solid transparent
+        &:after
+          content: ""
+          position: absolute
+          margin-left: -30px
+          margin-top: 43px
+          width: 0
+          height: 0
+          border-top: 7px solid #fff
+          border-left: 9px solid transparent
+          border-right: 9px solid transparent
+        img
+          width: 42px
+          height: 40px
+          +border-radius(40px)
+      .time
+        +padding-horizontal(15px)
+        margin-top: -35px
+        margin-left: 37px
+        position: absolute
+        display: inline-block
+        +border-radius(10px)
+        line-height: 1.6
+        color: #fff
+        background-color: #90c0db
+        > span
+          +padding-horizontal(5px)
+      .source
+        position: absolute
+        right: 5px
+        top: 16px
+        >a
+          color: #258
+    .h5
+      padding-left: 4em
+      display: block
+      color: #444
+      &:before
+        content: ""
+        margin-top: 6px
+        margin-left: -6px
+        +list-style(3px,#a9a9a9)
+      &:hover
+        font-weight: bold
+        text-decoration: none
+    p
+      padding-left: 4em
+      color: #888
+  .panel-product
+    margin-top: $horizontal-gatter
+    border: 1px solid #e0e0e0
+    +respond-to-min(small)
+      +margin-horizontal(-$epipe-gatter)
+    h3
+      margin-top: 10px
+      margin-left: 8px
+      padding-left: 10px
+      border-left: 4px solid #ff7300
+      +font-size(18)
+      font-weight: bold
+    .product-classify
+      position: absolute
+      top: 28px
+      left: 85px
+    .panel-inner-product
+      border-top: 1px solid #e0e0e0
+      +font-size(14)
+      >ol 
+        top: -35px
+        bottom: initial
+        left: 215px
+        display: none
+        width: 100%
+        +respond-to-min(medium)
+          display: block
+        >li
+          padding: 3px 8px
+          margin-left: 20px
+          +inline-block
+          border: 1px solid #e6e9ea
+          width: auto
+          height: auto
+          text-indent: 0
+          +border-radius(8px)
+          color: #333
+          background-color: #fff
+          &.active
+            border-color: #FF7300
+            padding: 4px 9px
+      p>a
+        color: #333
+      .product-item
+        min-height: 95px
+        p
+          height: 40px
+          overflow: hidden
+      .main-product
+        img
+          margin-top: 12px
+        p
+          margin-top: 15px
+        strong
+          display: block
+          +padding-vertical(5px)
+      .minor-product
+        .product-item
+          &+.product-item
+            border-top: 1px solid #e6e6e6
+          img
+            float: left
+          p
+            margin-top: 15px
+            width: 60%
+            float: right
+          strong
+            +padding-vertical(5px)
+            float: left
+        +respond-to-max(small)
+          &:last-child>.product-item
+            border-top: 1px solid #e6e6e6
+  .panel-recommend
+    margin-top: $horizontal-gatter
+    +padding-horizontal(10px)
+    padding-top: 10px
+    padding-bottom: 15px
+    border-top: 1px solid $panel-border-color
+    border-bottom: 1px solid $panel-border-color
+    +respond-to(small)
+      margin-left: -15px
+    h3
+      margin-left: 0
+    .ul-link-group
+      border-top: 1px solid $panel-border-color
+      .ul-link-list
+        float: left
+        width: 50%

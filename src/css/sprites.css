@@ -1,0 +1,42 @@
+.s-exchange{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}
+.s-hollow-mark{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px -19px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 16px;
+}
+.s-mark{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px -40px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 16px;
+}
+.s-new{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px -61px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.s-notepad{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px -82px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 16px;
+}
+.s-topic{
+  background-image: url(/content/images/spritesheet_index.png);
+  background-position: 0px -103px;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 16px;
+}

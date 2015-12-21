@@ -1,0 +1,39 @@
+@import "../mixin"
+// part of head
+.com-profile-header
+	position: relative
+	padding: .7em 0 1em
+	z-index: 1
+	box-shadow: 0 1px 5px #9E9E9E
+	.accout-group
+		line-height: 48px
+		text-align: right
+		a 
+			+font-size(14)
+			color: #333
+// 在线工厂
+.factory
+	.banner
+		position: relative
+		overflow: hidden
+		+respond-to-min(medium)
+			height: 420px
+		>img.big
+			position: absolute
+			left: 50%
+			margin-left: -950px
+			display: none
+	.content-title
+		position: absolute
+		right: 30px
+		top: 2em
+		+font-size(44)
+		color: #ff510c
+		+respond-to(small)
+			+font-size(40)
+		+respond-to(extra-small)
+			position: static
+			+margin-vertical(.5em)
+			+font-size(20)
+			text-align: center
+
