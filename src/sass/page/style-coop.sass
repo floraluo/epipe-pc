@@ -1,27 +1,27 @@
 @import "../mixin"
 // part of head
-.com-profile-header
-	position: relative
-	padding: .7em 0 1em
-	z-index: 1
-	box-shadow: 0 1px 5px #9E9E9E
-	.accout-group
-		line-height: 48px
-		text-align: right
-		a 
-			+font-size(14)
-			color: #333
+// .com-profile-header
+// 	position: relative
+// 	padding: .7em 0 1em
+// 	z-index: 1
+// 	box-shadow: 0 1px 5px #9E9E9E
+// 	.accout-group
+// 		line-height: 48px
+// 		text-align: right
+// 		a 
+// 			+font-size(14)
+// 			color: #333
 
-.banner
-	position: relative
-	overflow: hidden
-	+respond-to-min(medium)
-		height: 345px
-	>img.big
-		position: absolute
-		left: 50%
-		margin-left: -950px
-		display: none
+// .banner
+// 	position: relative
+// 	overflow: hidden
+// 	+respond-to-min(medium)
+// 		height: 345px
+// 	>img.big
+// 		position: absolute
+// 		left: 50%
+// 		margin-left: -950px
+// 		display: none
 
 .coop-main-body
 	.title
@@ -46,7 +46,14 @@
 				margin-left: 1em
 	.img-wrap
 		padding-bottom: 15px
+		text-align: center
 		.img-content
 			border: 1px solid #e3e3e3
+			max-height: 80px
+			overflow: hidden
+			+respond-to(medium)
+				max-height: 66px
+			+respond-to(small)
+				max-height: 69px
 			img
 				+margin-horizontal(auto)
