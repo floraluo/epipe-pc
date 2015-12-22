@@ -40,11 +40,11 @@
   width: 32px;
   height: 16px;
 }
-.flora-index .panel-sign .welcome:before, .flora-index .panel-cooperation .panel-content .complany-logo-group:before, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:before, .flora-index .panel-sign .welcome:after, .flora-index .panel-cooperation .panel-content .complany-logo-group:after, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:after {
+.flora-index .panel-sign .welcome:before, .flora-index .panel-cooperation .panel-content .complany-logo-group:before, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:before, .flora-index .panel-exhibition .carousel .carousel-inner .item .img-group:before, .flora-index .panel-cooperation-big .panel-content:before, .flora-index .panel-sign .welcome:after, .flora-index .panel-cooperation .panel-content .complany-logo-group:after, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:after, .flora-index .panel-exhibition .carousel .carousel-inner .item .img-group:after, .flora-index .panel-cooperation-big .panel-content:after {
   content: " ";
   display: table;
 }
-.flora-index .panel-sign .welcome:after, .flora-index .panel-cooperation .panel-content .complany-logo-group:after, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:after {
+.flora-index .panel-sign .welcome:after, .flora-index .panel-cooperation .panel-content .complany-logo-group:after, .flora-index .panel-cooperation .panel-content .complany-name-group > .name-group:after, .flora-index .panel-exhibition .carousel .carousel-inner .item .img-group:after, .flora-index .panel-cooperation-big .panel-content:after {
   clear: both;
 }
 
@@ -64,6 +64,61 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
+.flora-index .owl-custom {
+  margin-bottom: 15px;
+}
+.flora-index .owl-custom img {
+  width: 100%;
+  display: block;
+}
+.flora-index .owl-custom .owl-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.flora-index .owl-custom .owl-item > div {
+  position: relative;
+  overflow: hidden;
+}
+.flora-index .owl-custom .owl-item .title {
+  position: absolute;
+  bottom: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  font-size: 12px;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.flora-index .owl-custom .owl-item .title:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.flora-index .owl-custom .owl-controls {
+  position: absolute;
+  top: -27px;
+  right: 25px;
+}
+.flora-index .owl-custom .owl-controls .owl-page {
+  display: inline-block;
+  zoom: 1;
+  cursor: pointer;
+}
+.flora-index .owl-custom .owl-controls .owl-page.active span {
+  background-color: #ff7300;
+}
+.flora-index .owl-custom .owl-controls .owl-page span {
+  margin: 0 5px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  background-color: #e3e3e3;
 }
 .flora-index .ul-link-list {
   padding-left: 0;
@@ -117,6 +172,16 @@
   border-left: 4px solid #ff7300;
   font-size: 18px;
   font-size: 1.8rem;
+}
+.flora-index .panel-primary h3 > .more, .flora-index .panel-primary .panel-title.h3 > .more {
+  float: right;
+  margin-right: 15px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.flora-index .panel-primary h3 > .more:hover, .flora-index .panel-primary .panel-title.h3 > .more:hover {
+  color: #ff7300;
+  text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
   .flora-index .main-block {
@@ -404,6 +469,10 @@
 }
 .flora-index .panel-exhibition .carousel {
   padding-top: 29px;
+}
+.flora-index .panel-exhibition .carousel .carousel-inner .item .img-group > div {
+  float: left;
+  width: 50%;
 }
 .flora-index .panel-exhibition .carousel .carousel-indicators {
   padding-left: 10px;
@@ -817,4 +886,32 @@
 .flora-index .panel-recommend .ul-link-group .ul-link-list {
   float: left;
   width: 50%;
+}
+.flora-index .panel-cooperation-big {
+  margin: 15px -15px;
+  padding-top: 10px;
+  border: 1px solid #eee;
+}
+.flora-index .panel-cooperation-big .panel-content > div {
+  float: left;
+}
+.flora-index .panel-cooperation-big .panel-content > div.direction {
+  width: 5%;
+  padding-top: 18px;
+  text-align: center;
+}
+.flora-index .panel-cooperation-big .panel-content > div.direction > .glyphicon {
+  font-size: 26px;
+  font-size: 2.6rem;
+  color: #42414f;
+}
+.flora-index .panel-cooperation-big .panel-content > div.owl-cooperation-content {
+  width: 90%;
+}
+.flora-index .panel-cooperation-big .panel-content > div.owl-cooperation-content .owl-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.flora-index .panel-cooperation-big .panel-content > div.owl-cooperation-content .owl-item img {
+  width: 100%;
 }

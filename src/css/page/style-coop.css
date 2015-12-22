@@ -1,0 +1,74 @@
+.com-profile-header {
+  position: relative;
+  padding: 0.7em 0 1em;
+  z-index: 1;
+  box-shadow: 0 1px 5px #9E9E9E;
+}
+.com-profile-header .accout-group {
+  line-height: 48px;
+  text-align: right;
+}
+.com-profile-header .accout-group a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .banner {
+    height: 345px;
+  }
+}
+.banner > img.big {
+  position: absolute;
+  left: 50%;
+  margin-left: -950px;
+  display: none;
+}
+
+.coop-main-body .title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.coop-main-body .title > span {
+  position: relative;
+  text-align: center;
+}
+.coop-main-body .title > span:before, .coop-main-body .title > span:after {
+  content: "";
+  position: absolute;
+  margin-top: 14px;
+  width: 4em;
+  height: 1px;
+  background-color: #bdbdbd;
+}
+@media only screen and (max-width: 767px) {
+  .coop-main-body .title > span:before, .coop-main-body .title > span:after {
+    width: 3em;
+  }
+}
+.coop-main-body .title > span:before {
+  margin-left: -5em;
+}
+@media only screen and (max-width: 767px) {
+  .coop-main-body .title > span:before {
+    margin-left: -4em;
+  }
+}
+.coop-main-body .title > span:after {
+  margin-left: 1em;
+}
+.coop-main-body .img-wrap {
+  padding-bottom: 15px;
+}
+.coop-main-body .img-wrap .img-content {
+  border: 1px solid #e3e3e3;
+}
+.coop-main-body .img-wrap .img-content img {
+  margin-left: auto;
+  margin-right: auto;
+}

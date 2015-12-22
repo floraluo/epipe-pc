@@ -48,6 +48,21 @@ $(function(){
       autoPlay: true
   });
 
+  // 战略合作伙伴
+  var owlCoo = $("#owl-cooperation");
+  owlCoo.owlCarousel({
+    items: 5,
+    itemsDesktop: [1199, 5],
+    autoPlay: true
+  })
+  // Custom Navigation Events
+  $(".j-owl-next").click(function(){
+    owlCoo.trigger('owl.next');
+  })
+  $(".j-owl-prev").click(function(){
+    owlCoo.trigger('owl.prev');
+  })
+
   // 控制文字行数，超出...
   $(".j-dotdotdot").dotdotdot({
       wrap: "word",
@@ -59,6 +74,9 @@ $(function(){
       height: 40
     });
   })
+
+  // 展会|招投标
+  $('#carousel-exh-bid').carousel();
 
   //人才悬赏 
   var $ulTalents = $(".j-ul-talents");

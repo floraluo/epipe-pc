@@ -1,0 +1,52 @@
+@import "../mixin"
+// part of head
+.com-profile-header
+	position: relative
+	padding: .7em 0 1em
+	z-index: 1
+	box-shadow: 0 1px 5px #9E9E9E
+	.accout-group
+		line-height: 48px
+		text-align: right
+		a 
+			+font-size(14)
+			color: #333
+
+.banner
+	position: relative
+	overflow: hidden
+	+respond-to-min(medium)
+		height: 345px
+	>img.big
+		position: absolute
+		left: 50%
+		margin-left: -950px
+		display: none
+
+.coop-main-body
+	.title
+		+margin-vertical(40px)
+		>span
+			position: relative
+			text-align: center
+			&:before,&:after
+				content: ''
+				position: absolute
+				margin-top: 14px
+				width: 4em
+				height: 1px
+				background-color: #bdbdbd
+				+respond-to(extra-small)
+					width: 3em
+			&:before
+				margin-left: -5em
+				+respond-to(extra-small)
+					margin-left: -4em
+			&:after
+				margin-left: 1em
+	.img-wrap
+		padding-bottom: 15px
+		.img-content
+			border: 1px solid #e3e3e3
+			img
+				+margin-horizontal(auto)
